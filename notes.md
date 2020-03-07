@@ -16,9 +16,19 @@ Another new editor I have never worked with before. Seems to have a julia extens
 - VS code doesn't have a variable viewer. Big negative.
 
 ## Unit testing
+I consider Unit testing as the mark of any good project. The goal is not to produce the most tested code but to using unit testing as a tool to reason about how to implement algorithms.
 
 ## Plotting
 
 # On the book
 These are notes about concepts in the book, written down chapter by chapter as I learn.
-## Overview
+## 1. Overview
+>  I use C++ as the driving language, but you don’t need to. However, I suggest you do, because it’s fast, portable, and most production movie and video game renderers are written in C++.
+
+Julia is supposed to be performant, can we get the same performance out of it?
+
+## 2. Output an Image
+
+The book outputs the image to a file. We can take two approaches here. Either we rely on a plotting library to write the image file or manually write a function to write a ppm file. We will first try to follow the book and move to plotting libraries if need be.
+
+Current strategy: Make a simple ppm file by hand, and write a parameterized julia function to generate similar things. 
