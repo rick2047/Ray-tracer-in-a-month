@@ -2,6 +2,10 @@
 
 These are notes on the julia language, as I learn new concepts and libraries. They will be segregated by topics.
 
+## General
+
+- You have to import a whole package to get proper formatted strings? that is sub optimal
+
 ## IDE
 
 ### Juno
@@ -31,4 +35,4 @@ Julia is supposed to be performant, can we get the same performance out of it?
 
 The book outputs the image to a file. We can take two approaches here. Either we rely on a plotting library to write the image file or manually write a function to write a ppm file. We will first try to follow the book and move to plotting libraries if need be.
 
-Current strategy: Make a simple ppm file by hand, and write a parameterized julia function to generate similar things. 
+Just translated the C++ code to Julia. Wasn't that big of a problem except for row and column numbers in the loop. 
