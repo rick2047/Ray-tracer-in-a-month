@@ -35,4 +35,12 @@ Julia is supposed to be performant, can we get the same performance out of it?
 
 The book outputs the image to a file. We can take two approaches here. Either we rely on a plotting library to write the image file or manually write a function to write a ppm file. We will first try to follow the book and move to plotting libraries if need be.
 
-Just translated the C++ code to Julia. Wasn't that big of a problem except for row and column numbers in the loop. 
+Just translated the C++ code to Julia. Wasn't that big of a problem except for row and column numbers in the loop.
+
+## 3. The vec3 Class
+
+This section is where more meaty stuff begins. We need to have a class, and when there is a class there should be unit tests.
+
+> For our purposes, three coordinates suffices. We’ll use the same class vec3 for colors, locations, directions, offsets, whatever. Some people don’t like this because it doesn’t prevent you from doing something silly, like adding a color to a location.
+
+This may be a good candidate to have inheritance?
