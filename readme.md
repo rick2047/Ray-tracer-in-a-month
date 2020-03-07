@@ -9,3 +9,5 @@ I am making it a git repository to document how and why my ideas will change. He
 
 - [ ] Reading and writing a file
 - [ ] Make images in some standard library
+- [ ] Writing unit tests in julia
+- [ ] Setting up the IDE for Julia
