@@ -4,17 +4,17 @@
 rows = 200;
 cols = 100;
 max_color = 255; # colors go from 0-255
-fio = open("outputs\\helloWorld.ppm","w");
+fio = open("outputs\\helloWorld.ppm", "w");
 # format meta information, P3 format name, second line tells rows by column
-println(fio,
-"P3
-$rows $cols
-$max_color");
+println(fio, "P3\n$rows $cols\n$max_color");
 # actual pixels
-for j in range(cols-1, 0, step=-1), i in range(0, rows-1, step=1)
-    r = Int(round(i/rows * max_color));
-    g = Int(round(j/cols * max_color));
-    b = Int(round(0.2 * max_color));
-    println(fio, "$r $g $b");
-end
+rgb = [
+    [i / rows, j / cols, 0.2]
+    for
+    i in range(0, rows - 1, step = 1), j in range(cols - 1, 0, step = -1)
+]
+[
+    println(fio, "$(c[1]) $(c[2]) $(c[3])")
+    for c in map(x -> round.(Int, x * max_color), rgb)
+]
 close(fio);
