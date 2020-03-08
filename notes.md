@@ -7,7 +7,7 @@ These are notes on the julia language, as I learn new concepts and libraries. Th
 ### Strings
 - You have to import a whole package to get proper formatted strings? that is sub optimal. (of course there is string interpolation but that can't do stuff like "%1.2f")
 
-- The ability to just hit enter in a string to have a newline is good. But this can be problematic if it adds different newline chars based on the OS. 
+- The ability to just hit enter in a string to have a newline is good. But this can be problematic if it adds different newline chars based on the OS.
 ## IDE
 
 ### Juno
@@ -46,3 +46,7 @@ This section is where more meaty stuff begins. We need to have a class, and when
 > For our purposes, three coordinates suffices. We’ll use the same class vec3 for colors, locations, directions, offsets, whatever. Some people don’t like this because it doesn’t prevent you from doing something silly, like adding a color to a location.
 
 This may be a good candidate to have inheritance?
+
+The book doesn't clearly describe what exactly the vec3 class is doing. The code is given as is, and what I can infer from it is that it is a 3 dimensional vector and some syntactic sugar. Most of the things a vector can do can just be represented by an array. So what are we exactly adding here? One argument is we are adding named functions. Another is that this exercise will help get a deeper understanding of vectors.
+
+There is a static array package in julia, on one hand using it will defeat the purpose of this chapter, on the other hand I think I can reroute the purpose to understanding how multiple dispatch works. 
