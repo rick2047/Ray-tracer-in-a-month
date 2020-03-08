@@ -11,12 +11,10 @@ println(fio,
 $rows $cols
 $max_color");
 # actual pixels
-for j in range(cols-1, 0, step=-1)
-    for i in range(0, rows-1, step=1)
-        r = Int(round(i/rows * max_color));
-        g = Int(round(j/cols * max_color));
-        b = Int(round(0.2 * max_color));
-        println(fio, "$r $g $b");
-    end
+for j in range(cols-1, 0, step=-1), i in range(0, rows-1, step=1)
+    r = Int(round(i/rows * max_color));
+    g = Int(round(j/cols * max_color));
+    b = Int(round(0.2 * max_color));
+    println(fio, "$r $g $b");
 end
 close(fio);
