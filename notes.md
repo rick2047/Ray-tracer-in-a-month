@@ -4,8 +4,10 @@ These are notes on the julia language, as I learn new concepts and libraries. Th
 
 ## General
 
-- You have to import a whole package to get proper formatted strings? that is sub optimal
+### Strings
+- You have to import a whole package to get proper formatted strings? that is sub optimal. (of course there is string interpolation but that can't do stuff like "%1.2f")
 
+- The ability to just hit enter in a string to have a newline is good. But this can be problematic if it adds different newline chars based on the OS. 
 ## IDE
 
 ### Juno
