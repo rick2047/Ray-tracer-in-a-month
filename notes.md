@@ -49,4 +49,16 @@ This may be a good candidate to have inheritance?
 
 The book doesn't clearly describe what exactly the vec3 class is doing. The code is given as is, and what I can infer from it is that it is a 3 dimensional vector and some syntactic sugar. Most of the things a vector can do can just be represented by an array. So what are we exactly adding here? One argument is we are adding named functions. Another is that this exercise will help get a deeper understanding of vectors.
 
-There is a static array package in julia, on one hand using it will defeat the purpose of this chapter, on the other hand I think I can reroute the purpose to understanding how multiple dispatch works. 
+There is a static array package in julia, on one hand using it will defeat the purpose of this chapter, on the other hand I think I can reroute the purpose to understanding how multiple dispatch works.
+
+## 4. Rays, a Simple Camera, and Background
+
+This basically describes a ray as how much it travels in each space dimension per unit length.
+
+>This is of the form calculate which ray goes from the eye to a pixel, compute what that ray intersects, and compute a color for that intersection point.
+
+The ray tracer is a simple concept which derives its power from recursion.
+
+>I’ve often gotten into trouble using square images for debugging because I transpose x and y too often, so I’ll stick with a 200×100 image.
+
+One of the more subtle techniques I have seen which make debugging easier. 
