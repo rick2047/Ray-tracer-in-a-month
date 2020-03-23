@@ -8,6 +8,11 @@ These are notes on the julia language, as I learn new concepts and libraries. Th
 - You have to import a whole package to get proper formatted strings? that is sub optimal. (of course there is string interpolation but that can't do stuff like "%1.2f")
 
 - The ability to just hit enter in a string to have a newline is good. But this can be problematic if it adds different newline chars based on the OS.
+
+### Object Orientation
+
+The class structure is a bit weird. Its not really object orientation, the central concept is multiple dispatch and it sounds lovely. Instead of defining classes and rigid methods inside them, we can define the data structures and methods separately. This seems a bit more intuitive and flexible. 
+
 ## IDE
 
 ### Juno
@@ -61,4 +66,4 @@ The ray tracer is a simple concept which derives its power from recursion.
 
 >I’ve often gotten into trouble using square images for debugging because I transpose x and y too often, so I’ll stick with a 200×100 image.
 
-One of the more subtle techniques I have seen which make debugging easier. 
+One of the more subtle techniques I have seen which make debugging easier.
