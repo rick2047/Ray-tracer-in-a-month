@@ -1,16 +1,27 @@
-using StaticArrays
 import Base.length
+using StaticArrays
 
-Vec3 = SVector{3};
-## treating vector as location in space
-x(v::Vec3) = v[1];
-y(v::Vec3) = v[2];
-z(v::Vec3) = v[3];
-## treating vector as color
-r(v::Vec3) = v[1];
-g(v::Vec3) = v[2];
-b(v::Vec3) = v[3];
+vec3 = SVector{3};
+
+function Base.getproperty(v::vec3, s::Symbol)
+    ## treating vector as color
+    if s == :x
+        return getindex(v, 1);
+    elseif s == :y
+        return getindex(v, 2);
+    elseif s == :z
+        return getindex(v, 3);
+    elseif s == :r
+        return getindex(v, 1);
+    elseif s == :g
+        return getindex(v, 2);
+    elseif s == :b
+        return getindex(v, 3);
+    else
+        return getfield(v, s)
+    end
+end
 ## special operators
-length(v::Vec3) = sqrt(v[1]^2 + v[2]^2 + v[3]^2);
-squared_length(v::Vec3) = v[1]^2 + v[2]^2 + v[3]^2;
-make_unit_vector(v::Vec3) = v/length(v);
+length(v::vec3) = sqrt(squared_length(v));
+squared_length(v::vec3) = sum(v.^2);
+make_unit_vector(v::vec3) = v/length(v);

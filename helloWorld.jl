@@ -9,12 +9,12 @@ fio = open("outputs\\helloWorld.ppm", "w");
 println(fio, "P3\n$rows $cols\n$max_color");
 # actual pixels
 rgb = [
-    [i / rows, j / cols, 0.2]
+    vec3(i / rows, j / cols, 0.2)
     for
     i in range(0, rows - 1, step = 1), j in range(cols - 1, 0, step = -1)
 ]
 [
-    println(fio, "$(c[1]) $(c[2]) $(c[3])")
+    println(fio, "$(c.x) $(c.y) $(c.z)")
     for c in map(x -> round.(Int, x * max_color), rgb)
 ]
 close(fio);
