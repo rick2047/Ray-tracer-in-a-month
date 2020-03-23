@@ -11,7 +11,7 @@ These are notes on the julia language, as I learn new concepts and libraries. Th
 
 ### Object Orientation
 
-The class structure is a bit weird. Its not really object orientation, the central concept is multiple dispatch and it sounds lovely. Instead of defining classes and rigid methods inside them, we can define the data structures and methods separately. This seems a bit more intuitive and flexible.
+The class structure is a bit weird. Its not really object orientation, the central concept is multiple dispatch and it sounds lovely. Instead of defining classes and rigid methods inside them, we can define the data structures and methods separately. This seems a bit more intuitive and flexible. 
 
 ## IDE
 
